@@ -70,7 +70,7 @@ class Repository:
             )
             params.append(f"%{token}%")
 
-        # Диапазоны скидок соответствуют формулировке задания для варианта 5.
+        # Диапазоны скидок соответствуют требованиям проекта.
         if discount_filter == "0_10":
             where_parts.append("p.discount_percent >= 0 AND p.discount_percent < 11")
         elif discount_filter == "11_14":
@@ -78,7 +78,7 @@ class Repository:
         elif discount_filter == "15_plus":
             where_parts.append("p.discount_percent >= 15")
 
-        # В ORDER BY попадают только заранее разрешенные варианты сортировки.
+        # В ORDER BY попадают только заранее разрешенные режимы сортировки.
         sort_sql = {
             "price_asc": "p.price ASC, p.id ASC",
             "price_desc": "p.price DESC, p.id ASC",

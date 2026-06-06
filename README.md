@@ -50,7 +50,7 @@ MySQL Server должен быть запущен.
 python scripts/import_data.py
 ```
 
-Скрипт создаст базу `mebelorg`, таблицы и загрузит данные из ресурсов В5.
+Скрипт создаст базу `mebelorg`, таблицы и загрузит данные из ресурсов проекта.
 
 ## Запуск приложения
 
@@ -90,5 +90,5 @@ password: JlFRCZ
 - `app/db.py` - подключение к MySQL.
 - `sql/schema.sql` - SQL-скрипт базы данных.
 - `scripts/import_data.py` - импорт исходных данных.
-- `resources/import` - исходные файлы варианта 5.
+- `resources/import` - исходные файлы проекта.
 - `resources/product_images` - рабочая папка изображений товаров.
