@@ -1,0 +1,1 @@
+"""MebelOrg desktop application package."""
