@@ -1,0 +1,139 @@
+СТЕК ПО ДЛЯ РЕАЛИЗАЦИИ ПРОЕКТА
+
+Проект: приложение на Python с интерфейсом PyQt и базой данных MySQL.
+
+
+1. ОСНОВНОЙ СТЕК
+
+Python 3.11 / 3.12
+Основной язык разработки приложения.
+
+PyQt6
+Библиотека для создания графического интерфейса: окна, кнопки, таблицы,
+формы авторизации, формы добавления и редактирования товаров.
+
+Qt Designer
+Визуальный редактор интерфейсов. В нем можно создавать .ui-файлы, а затем
+подключать их в Python-коде через PyQt.
+
+MySQL Server
+Сама база данных, в которой будут храниться пользователи, товары, заказы,
+пункты выдачи и другие данные.
+
+MySQL Workbench
+Программа для работы с MySQL: создание базы данных, таблиц, связей,
+импорт данных и проверка содержимого таблиц.
+
+mysql-connector-python
+Python-библиотека для подключения приложения к MySQL.
+
+openpyxl
+Python-библиотека для чтения Excel-файлов из приложений:
+- Tovar.xlsx
+- user_import.xlsx
+- Заказ_import.xlsx
+- Пункты выдачи_import.xlsx
+
+Pillow
+Библиотека для работы с изображениями. Установим и будем использовать
+при необходимости.
+
+PyInstaller
+Библиотека для сборки Python-приложения в .exe. Установим и будем
+использовать при необходимости.
+
+VS Code / PyCharm
+Среда разработки для написания кода.
+
+
+2. СОЗДАНИЕ ВИРТУАЛЬНОГО ОКРУЖЕНИЯ
+
+В папке проекта открыть PowerShell и выполнить:
+
+python -m venv .venv
+.venv\Scripts\activate
+
+Обновить pip:
+
+python -m pip install --upgrade pip
+
+
+3. УСТАНОВКА PYTHON-БИБЛИОТЕК
+
+Основной набор:
+
+pip install PyQt6 mysql-connector-python openpyxl
+
+Qt Designer:
+
+pip install pyqt6-tools
+
+Запуск Qt Designer:
+
+pyqt6-tools designer
+
+Дополнительно, при необходимости:
+
+pip install pillow pyinstaller
+
+
+4. ИТОГОВАЯ КОМАНДА ДЛЯ УСТАНОВКИ ВСЕГО НАБОРА
+
+python -m venv .venv
+.venv\Scripts\activate
+python -m pip install --upgrade pip
+pip install PyQt6 pyqt6-tools mysql-connector-python openpyxl pillow pyinstaller
+
+
+5. УСТАНОВКА MYSQL
+
+Нужно установить:
+- MySQL Server
+- MySQL Workbench
+
+Скачать официальный MySQL Installer:
+
+https://dev.mysql.com/downloads/installer/
+
+При установке выбрать:
+- MySQL Server
+- MySQL Workbench
+- MySQL Shell - необязательно
+- Connector/Python - можно не ставить, так как он устанавливается через pip
+
+Важно:
+MySQL Workbench - это не база данных, а программа для работы с MySQL.
+Для проекта обязательно нужен MySQL Server.
+
+
+6. ПРОВЕРКА УСТАНОВКИ
+
+Проверить Python:
+
+python --version
+
+Проверить установленные библиотеки:
+
+pip list
+
+Проверить подключение библиотеки MySQL:
+
+python -c "import mysql.connector; print('MySQL connector OK')"
+
+Проверить PyQt6:
+
+python -c "from PyQt6.QtWidgets import QApplication; print('PyQt6 OK')"
+
+
+7. МИНИМАЛЬНО ОБЯЗАТЕЛЬНО
+
+Для выполнения проекта обязательно нужны:
+- Python
+- PyQt6
+- MySQL Server
+- MySQL Workbench
+- mysql-connector-python
+- openpyxl
+
+Pillow и PyInstaller можно установить сразу, но использовать только если
+они реально понадобятся.
